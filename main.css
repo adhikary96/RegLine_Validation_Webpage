@@ -1,0 +1,171 @@
+body{
+    background-image: linear-gradient(to left, #c33764, #1d2671);
+} 
+ .heading{
+    font-family: 'Zhi Mang Xing', cursive;
+    font-size: 50px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin: 0;
+    /* outline: 2px dashed #ffffff;
+    outline-offset: -2px; */
+
+}
+
+.docHead{
+    font-family: 'Over the Rainbow', cursive;
+    font-size: 35px;
+    /* border-bottom: 1px rgb(255, 230, 0) solid; */
+    /* background-color: rgba(255, 230, 0, 0.3); */
+    text-align: left;
+    font-weight: bold;
+    color: rgb(255, 230, 0);
+}
+.p{
+    padding: 0px 0px 0px 10px;
+}
+.nameHead{
+    font-family: 'Allan', cursive;
+    font-size: 25px;
+    /* border-left: 6px rgb(0, 255, 136) solid; */
+    background-color: rgba(224, 125, 191, 0.664);
+    text-align: left;
+    color: rgb(255, 255, 255);
+    letter-spacing: 5px;
+}
+.headSection{
+    font-family: 'Allan', cursive;
+    font-size: 25px;
+    text-align: right;
+    border-right: 5px rgb(0, 255, 0) solid;
+    background-color: rgba(0, 255, 0, 0.31);
+    padding: 0px 10px 0px 0px;
+    color: rgb(255, 255, 255);
+    width: 150px;
+}
+.headSectionLine{
+    font-family: 'Allan', cursive;
+    font-size: 23px;
+    text-align: right;
+    border-right: 5px rgb(0, 255, 0) solid;
+    background-color: rgba(0, 255, 0, 0.31);
+    padding: 0px 10px 0px 0px;
+    color: rgb(255, 255, 255);
+    width: 80px;
+}
+.headSectionLineBR{
+    font-family: 'Allan', cursive;
+    font-size: 23px;
+    text-align: right;
+    border-right: 5px rgb(0, 255, 0) solid;
+    border-bottom: 1px rgb(0, 255, 0) solid;
+    background-color: rgba(0, 255, 0, 0.31);
+    padding: 0px 10px 0px 0px;
+    color: rgb(255, 255, 255);
+    width: 35px;
+}
+.headSectionName{
+    font-family: 'Allan', cursive;
+    font-size: 25px;
+    text-align: Center;
+    border-right: 5px rgb(0, 255, 0) solid;
+    border-left: 5px rgb(0, 255, 0) solid;
+    background-color: rgba(0, 255, 0, 0.31);
+    padding: 0px 10px 0px 0px;
+    color: rgb(255, 255, 255);
+    width: 150px;
+}
+.sepearte{
+    height: 5px;
+}
+
+.dataSection{
+    font-family: 'Atma', cursive;
+    font-weight: bold;
+    font-size: 17px;
+}
+.dataSectionApt{
+    font-family: 'Inconsolata', monospace;
+    font-weight: bold;
+    font-size: 17px;
+}
+.dataSectionLine input{
+    font-family: 'Atma', cursive;
+    font-weight: bold;
+    font-size: 17px;
+    width: 300px;
+    height: 35px;
+}
+.dataSectionLineBR input{
+    font-family: 'Atma', cursive;
+    font-weight: bold;
+    font-size: 17px;
+    width: 30px;
+    height: 35px;
+}
+.prefixSection{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+.dataSection input, .dataSection select{
+    height: 35px;
+}
+.dataSectionApt input{
+    height: 35px;
+    width: 105px;
+}
+.cliName{
+    width: 360px;
+    background-color: rgba(80, 82, 80, 0.31);
+    color: blanchedalmond;
+    font-family: 'Allan', cursive;
+    font-size: 25px;
+    border: none;
+    height: 35px;
+    border-right: 1px rgb(0, 255, 0) solid;
+    border-bottom: 1px rgb(0, 255, 0) solid;
+    border-left: 1px rgb(0, 255, 0) solid;
+}
+.cliNameBR input{
+    width: 30px;
+    background-color: rgba(80, 82, 80, 0.31);
+    color: blanchedalmond;
+    font-family: 'Allan', cursive;
+    font-size: 25px;
+    border: none;
+    height: 35px;
+    border: 1px rgb(0, 255, 0) solid;
+    /* border-right: 1px rgb(0, 255, 0) solid;
+    border-bottom: 1px rgb(0, 255, 0) solid;
+    border-left: 1px rgb(0, 255, 0) solid; */
+}
+.nameButton{
+    font-family: 'Allan', cursive;
+    font-size: 25px;
+    font-weight: bold;
+    border: none;
+    height: 40px;
+    width: 250px;
+    border-radius: 5px;
+}
+.nameButton:hover, .nameReset:hover{
+    border: 2px rgb(0, 255, 13) solid;
+    background-color: #aeff95;
+    color: rgb(0, 0, 0);
+}
+.nameReset{
+    font-family: 'Allan', cursive;
+    font-size: 25px;
+    font-weight: bold;
+    border: none;
+    height: 40px;
+    width: 150px;
+    border-radius: 5px;
+}
+.acctSection{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    height: 40px;
+}
