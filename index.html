@@ -36,7 +36,7 @@
 
     .docHead{
         font-family: 'Over the Rainbow', cursive;
-        font-size: 35px;
+        font-size: 30px;
         /* border-bottom: 1px rgb(255, 230, 0) solid; */
         /* background-color: rgba(255, 230, 0, 0.3); */
         text-align: left;
@@ -48,7 +48,7 @@
     }
     .nameHead{
         font-family: 'Allan', cursive;
-        font-size: 25px;
+        font-size: 20px;
         /* border-left: 6px rgb(0, 255, 136) solid; */
         background-color: rgba(224, 125, 191, 0.664);
         text-align: left;
@@ -57,13 +57,13 @@
     }
     .headSection{
         font-family: 'Allan', cursive;
-        font-size: 25px;
+        font-size: 20px;
         text-align: right;
         border-right: 5px rgb(0, 255, 0) solid;
         background-color: rgba(0, 255, 0, 0.31);
         padding: 0px 10px 0px 0px;
         color: rgb(255, 255, 255);
-        width: 150px;
+        width: 120px;
     }
     .headSectionLine{
         font-family: 'Allan', cursive;
@@ -88,7 +88,7 @@
     }
     .headSectionName{
         font-family: 'Allan', cursive;
-        font-size: 25px;
+        font-size: 20px;
         text-align: Center;
         border-right: 5px rgb(0, 255, 0) solid;
         border-left: 5px rgb(0, 255, 0) solid;
@@ -123,7 +123,7 @@
         font-weight: bold;
         font-size: 17px;
         width: 30px;
-        height: 35px;
+        height: 30px;
     }
     .prefixSection{
         font-family: 'Yanone Kaffeesatz', sans-serif;
@@ -131,10 +131,10 @@
         font-size: 20px;
     }
     .dataSection input, .dataSection select{
-        height: 35px;
+        height: 30px;
     }
     .dataSectionApt input{
-        height: 35px;
+        height: 30px;
         width: 105px;
     }
     .cliName{
@@ -142,9 +142,9 @@
         background-color: rgba(80, 82, 80, 0.31);
         color: blanchedalmond;
         font-family: 'Allan', cursive;
-        font-size: 25px;
+        font-size: 22px;
         border: none;
-        height: 35px;
+        height: 30px;
         border-right: 1px rgb(255, 255, 255) solid;
         border-bottom: 1px rgb(255, 255, 255) solid;
         border-left: 1px rgb(255, 255, 255) solid;
@@ -154,7 +154,7 @@
         background-color: rgba(80, 82, 80, 0.31);
         color: blanchedalmond;
         font-family: 'Allan', cursive;
-        font-size: 25px;
+        font-size: 22px;
         border: none;
         height: 35px;
         border: 1px rgb(0, 255, 0) solid;
@@ -164,11 +164,11 @@
     }
     .nameButton{
         font-family: 'Allan', cursive;
-        font-size: 25px;
+        font-size: 22px;
         font-weight: bold;
         border: none;
         height: 40px;
-        width: 250px;
+        width: 150px;
         border-radius: 5px;
     }
     .nameButton:hover, .nameReset:hover{
@@ -178,7 +178,7 @@
     }
     .nameReset{
         font-family: 'Allan', cursive;
-        font-size: 25px;
+        font-size: 22px;
         font-weight: bold;
         border: none;
         height: 40px;
@@ -378,21 +378,28 @@
             </tr>
             <tr class="sepearte"><td colspan="2"></td></tr> 
             <tr>
-                <td class="dataSection" colspan="2" style="color:rgb(250, 250, 250); text-align: center;">
-                    Make a selection in the first Dropdown. <br/>The available Account options will be displayed.
+                <td class="dataSection" style="color:rgb(250, 250, 250); text-align: center;">
+                    Select an 'Account Type' from Dropdown. <br\>Available Account options will be displayed.
                 </td>
-            <tr class="sepearte"><td colspan="2"></td></tr> 
-            <tr>
-                <td colspan="2">
+                <td>
                     <select class="acctSection" id="accType">
                         <option value="select">--Account Type--</option>
                         <option value="Individual">Individual</option>
                         <option value="Joint">Joint</option>
                         <option value="Retirement">Retirement</option>
                     </select>
+                </td>
+            </tr>
+            <tr class="sepearte"><td colspan="2"></td></tr> 
+            <tr>
+                <td colspan="2">
                     <select class="acctSection" id="accSubType">
                         <option value="select">--Account Sub-category--</option>
                     </select>
+                    <select class="acctSection" id="accJointTOD">
+                        <option value="select">--Acc Joint TOD--</option>
+                    </select>
+
                 </td>
             </tr>
             <tr class="sepearte"><td colspan="2"></td></tr> 
@@ -401,13 +408,58 @@
         <tr class="sepearte"><td colspan="2"></td></tr>
         <table class="nameTab">
             <tr class="nameHead">
-                <td class='p' colspan="2"><center>FINAL DATA</center></td>
+                <td class='p' colspan="2"><center>JOINT OWNER DETAILS</center></td>
             </tr>
-            <tr class="sepearte"><td colspan="2"></td></tr> 
-            <tr>
-                <td colspan="2"><center>
-                    <input type="button" class="nameButton" value="Generate Data" onclick="getName();">
-                </center></td>
+            <tr class="sepearte"><td colspan="2"></td></tr>
+            <tr class="tableName">
+                <td class="headSection">Prefix</td>
+                <td class="dataSection">
+                    <select class="prefixSection" id="txtJtPrefix">
+                        <option value="select">--Select--</option>
+                        <option value="Mr">Mr</option>
+                        <option value="Mrs">Mrs</option>
+                        <option value="Ms">Ms</option>
+                        <option value="Miss">Miss</option>
+                        <option value="Dr">Dr</option>
+                    </select>
+                </td>
+            </tr>
+            <tr class="sepearte"><td colspan="2"></td></tr>
+            <tr class="tableName">
+                <td class="headSection">First Name</td>
+                <td class="dataSection"><input type="text" id="txtJtFN" placeholder="First name . . ."></td>
+            </tr>
+            <tr class="sepearte"><td colspan="2"></td></tr>
+            <tr class="tableName">
+                <td class="headSection">Middle Name</td>
+                <td class="dataSection"><input type="text" id="txtJtMI" placeholder="Middle name . . ."></td>
+            </tr>
+            <tr class="sepearte"><td colspan="2"></td></tr>
+            <tr class="tableName">
+                <td class="headSection">Last Name</td>
+                <td class="dataSection"><input type="text" id="txtJtLN" placeholder="Last name . . ."></td>
+            </tr>
+            <tr class="sepearte"><td colspan="2"></td></tr>
+            <tr class="tableName">
+                <td class="headSection">Suffix</td>
+                <td class="dataSection">
+                    <select class="prefixSection" id="txtJtSuffix">
+                        <option value="select">--Select--</option>
+                        <option value="Jr">Jr</option>
+                        <option value="Sr">Sr</option>
+                        <option value="II">II</option>
+                        <option value="III">III</option>
+                        <option value="Iv">IV</option>
+                        <option value="Esq">Esq</option>
+                    </select>
+                </td>
+            </tr>
+            <tr class="sepearte"><td colspan="2"></td></tr>
+        </table>
+        <tr class="sepearte"><td colspan="2"></td></tr>
+        <table class="nameTab">
+            <tr class="nameHead">
+                <td class='p' colspan="2"><center>FINAL DATA</center></td>
             </tr>
             <tr class="sepearte"><td colspan="2"></td></tr> 
             <tr>
@@ -421,9 +473,9 @@
             </tr>
                 <tr class="sepearte"><td colspan="2"></td></tr>
             <tr>
-                <td colspan="2"><center><input type="button" class="nameReset" value="Reset All Data" onclick="reset();"></center></td>
-            </tr> 
-            
+                <td><center><input type="button" class="nameReset" value="Reset All Data" onclick="reset();"></center></td>
+                <td><center><input type="button" class="nameButton" value="Generate Data" onclick="getName();"></center></td>
+            </tr>
         </table>
     </table></div>
     <div class="col-sm-4"><table>
@@ -544,6 +596,12 @@
             </tr>
     </table></div>
     <script>
+        var clientNameFinal = "";
+        var apt_suiteCSFinal = "";
+        var streetLineBR = "";
+        var cityStateFInal = "";
+        var jointOwnerName = "";
+
         jQuery(function($){
             var accountTypes = {
                 'select': ['--Account Sub-category--'],
@@ -552,6 +610,7 @@
                 'Retirement':['Individual Retirement Account','Decendent IRA','Roth IRA','Decendent Roth IRA','Segregated IRA Rollover']
             }
             var $accountSubType = $('#accSubType');
+            var $jointOptionTOD = $('#accJointTOD');
             // console.log($accountSubType.value);
             $('#accType').change(function(){
                 var acctType = $(this).val();
@@ -562,7 +621,15 @@
                     return '<option value="' + subType + '">' + subType + '</option>'
                 }).join('');
                 $accountSubType.html(html)
-                })
+                
+                if(acctType=="Joint"){
+                    var jt = accountTypes["Individual"] || []
+                    var html1 = $.map(jt, function(jt){
+                        return '<option value="' + jt + '">' + jt + '</option>'
+                    }).join('');
+                }
+                $jointOptionTOD.html(html1)
+            })
 
         })
         function reset(){
@@ -640,6 +707,7 @@
                 if(name.length > 30){
                     name = FN +" "+ LN;
                 }
+                clientNameFinal = name;
                 document.getElementById('name').value = name;
                 document.getElementById('txtLine1').value = name;
                 document.getElementById('txtLine1b').value = name;
@@ -648,6 +716,48 @@
                 
             }
             fillAddress();
+        }
+        function getJtName(){
+            var prefix = document.getElementById('txtJtPrefix').value;
+            var FN = document.getElementById('txtJtFN').value;
+            var MI = document.getElementById('txtJtMI').value;
+            var LN = document.getElementById('txtJtLN').value;
+            var suffix = document.getElementById('txtJtSuffix').value;
+            var name = "";
+            var nameLength = "";
+            if(prefix == "select" && FN == "" && MI == "" && LN == "" && suffix == "select"){
+                window.alert("Fields are empty. Please fill them and try again !!!")
+            } else {
+                if(prefix != "select"){
+                    prefix = prefix +" ";
+                } else{
+                    prefix = "";
+                }
+                if(MI != ""){
+                    MI = " "+ MI +" ";
+                }
+                if(suffix != "select"){
+                    suffix =  " " + suffix;
+                } else {
+                    suffix = "";
+                }
+                name = prefix + FN + MI + LN + suffix;
+                if(name.length > 30){
+                    name = FN + MI + LN + suffix;
+                }
+                if(name.length > 30){
+                    name = prefix + FN + MI + LN;
+                }
+                if(name.length > 30){
+                    name = FN + MI + LN;
+                }
+                if(name.length > 30){
+                    name = FN +" "+ LN;
+                }
+                jointOwnerName = name;
+                document.getElementById('txtLine2').value = name;
+                document.getElementById('txtLine2b').value = name;
+            }
         }
         function fillAddress(){
             var aptCd = document.getElementById('txtApt').value;
@@ -693,9 +803,24 @@
                     if(streetName.length > 30){
                         streetName = streetName.substring(0,30);
                     }
-                    document.getElementById("txtLine5").value = street;
-                    document.getElementById("txtLine2b").value = streetName;
-                    document.getElementById("txtLine2a").value = "M";
+                    streetLineBR = streetName;
+                    apt_suiteCSFinal =aptName;
+                    /* var accountType = document.getElementById("accType").value;
+                    var jointTOD = document.getElementById("accJointTOD").value;
+                    if(accountType == "Joint" && jointTOD == "Non-Active TOD"){
+                        document.getElementById("txtLine5").value = street;
+                        document.getElementById("txtLine2b").value = streetName;
+                        document.getElementById("txtLine2a").value = "M";
+                    } else if(accountType == "Joint" && jointTOD == "Active TOD"){
+                        document.getElementById("txtLine5").value = street;
+                        document.getElementById("txtLine4b").value = streetName;
+                        document.getElementById("txtLine4a").value = "M";
+                    } else {
+                        document.getElementById("txtLine5").value = street;
+                        document.getElementById("txtLine2b").value = streetName;
+                        document.getElementById("txtLine2a").value = "M";
+                    } */
+                    
                 } else {
                     document.getElementById("txtLine5").value = street;
                     document.getElementById("txtLine2b").value = street;
@@ -768,6 +893,7 @@
                     if(stateLineName.length > 30){
                         stateLineName = state + " " + zip;
                     }
+                    cityStateFInal = stateLineName;
                     document.getElementById("txtLine6").value = stateLineName;
                     document.getElementById("txtLine3b").value = stateLineName;
                     document.getElementById("txtLine3a").value = "C";
@@ -775,11 +901,24 @@
             }
             accountTypeAddressMods();
         }
+        
         function accountTypeAddressMods(){
             var accountType = document.getElementById("accType").value;
             var accountSub = document.getElementById("accSubType").value;
+            var accountJtTOD = document.getElementById("accJointTOD").value;
 
-            if(accountSub != "Non-Active TOD"){
+            if(accountSub != "Non-Active TOD" && accountJtTOD != "Non-Active TOD"){
+                document.getElementById("txtLine2").value = "--TOD--";
+                temp = document.getElementById("txtLine2b").value;
+                temp1 = document.getElementById("txtLine3b").value;
+                document.getElementById("txtLine3b").value = temp;
+                document.getElementById("txtLine4b").value = temp1;
+
+                document.getElementById("txtLine2b").value = "T/O/D";
+                document.getElementById("txtLine2a").value = "";
+                document.getElementById("txtLine3a").value = "M";
+                document.getElementById("txtLine4a").value = "C";
+            } else if (accountJtTOD == "Active TOD"){
                 document.getElementById("txtLine2").value = "--TOD--";
                 temp = document.getElementById("txtLine2b").value;
                 temp1 = document.getElementById("txtLine3b").value;
