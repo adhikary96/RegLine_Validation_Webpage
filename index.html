@@ -6,6 +6,7 @@
     <title>Registration Lines</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
+    <link rel="shortcut icon" type="image/jpg" href="img/logo_R.jpg">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Over+the+Rainbow&display=swap" rel="stylesheet">
@@ -197,7 +198,9 @@
     </style>
 </head>
 <body><center>
-    <center><div class="heading"><i class="fa fa-id-card-o" style="color:rgb(255, 255, 255);"></i> Registration Line Validator</div></center>
+    <center><div class="heading">
+        <i class="fa fa-id-card-o" style="color:rgb(255, 255, 255);"></i> 
+            Registration Line Validator</div></center>
     <div class="col-sm-4"><table class="docupaceInputTab">
         <tr class="docHead">
             <td class="p" colspan="2">Docupace Inputs</td>
@@ -478,7 +481,7 @@
                 <td class="dataSection"><input id="length"type="text" placeholder="Length of Name is . . ." disabled></td>
             </tr>
             <tr class="sepearte"><td colspan="2"></td></tr> 
-            <tr class="headSectionName"><td colspan="2"><i class="fa fa-user-circle-o"></i> Client's Full Name</td></tr>
+            <tr class="headSectionName"><td colspan="2"><i class="fa fa-user-circle-o"></i> CLIENT'S FULL NAME</td></tr>
             <tr>
                 <td colspan="2"><center><input class="cliName" id="name" type="text" disabled style="text-align: center;"></center></td>
             </tr>
@@ -639,7 +642,7 @@
                     var html1 = $.map(jt, function(jt){
                         return '<option value="' + jt + '">' + jt + '</option>'
                     }).join('');
-                }
+                } 
                 $jointOptionTOD.html(html1)
             })
 
@@ -681,12 +684,13 @@
 
             document.getElementById('length').value = "";
             document.getElementById('name').value = "";
+            document.getElementById('accJointTOD').value = "--Acc Joint TOD--";
         }
         function getName(){
             console.log("In getName");
             var prefix = document.getElementById('txtPrefix').value;
             var FN = document.getElementById('txtFN').value;
-            var MI = document.getElementById('txtMI').value;
+            var MI = document.getElementById('txtMI').value.substring(0,1);
             var LN = document.getElementById('txtLN').value;
             var suffix = document.getElementById('txtSuffix').value;
             var name = "";
@@ -737,7 +741,7 @@
             console.log("In getJointName !!!");
             var prefix = document.getElementById('txtJtPrefix').value;
             var FN = document.getElementById('txtJtFN').value;
-            var MI = document.getElementById('txtJtMI').value;
+            var MI = document.getElementById('txtJtMI').value.substring(0,1);
             var LN = document.getElementById('txtJtLN').value;
             var suffix = document.getElementById('txtJtSuffix').value;
             var name = "";
@@ -969,7 +973,7 @@
                     document.getElementById("txtLine6").value = cityStateFInal;
 
                     document.getElementById("txtLine1b").value = clientNameFinal;
-                    document.getElementById("txtLine2b").value = "--TOD--";
+                    document.getElementById("txtLine2b").value = "T/O/D";
                     document.getElementById("txtLine3b").value = streetLineBR;
                     document.getElementById("txtLine4b").value = cityStateFInal;
                     document.getElementById("txtLine1a").value = "S";
@@ -983,14 +987,14 @@
                 if(accountSub == "Individual Retirement Account"){
                     document.getElementById("txtLine1").value = clientNameFinal;
                     document.getElementById("txtLine2").value = "Individual Retirement Account";
-                    document.getElementById("txtLine3").value = " ***fill later***";
+                    document.getElementById("txtLine3").value = "RBC Capital Marckets LLC Cust";
                     document.getElementById("txtLine4").value = apt_suiteNameFinal;
                     document.getElementById("txtLine5").value = streetLineCS;
                     document.getElementById("txtLine6").value = cityStateFInal;
 
                     document.getElementById("txtLine1b").value = clientNameFinal;
                     document.getElementById("txtLine2b").value = "Individual Retirement Account";
-                    document.getElementById("txtLine3b").value = " ***fill later***";
+                    document.getElementById("txtLine3b").value = "RBC Capital Marckets LLC Cust";
                     document.getElementById("txtLine4b").value = streetLineBR;
                     document.getElementById("txtLine5b").value = cityStateFInal;
                     document.getElementById("txtLine1a").value = "S";
@@ -1000,15 +1004,15 @@
                     document.getElementById("txtLine5a").value = "C";
                 } else if(accountSub == "Decendent IRA"){
                     document.getElementById("txtLine1").value = clientNameFinal;
-                    document.getElementById("txtLine2").value = "***need to check***";
-                    document.getElementById("txtLine3").value = " ***fill later***";
+                    document.getElementById("txtLine2").value = "Decendent IRA";
+                    document.getElementById("txtLine3").value = "RBC Capital Marckets LLC Cust";
                     document.getElementById("txtLine4").value = apt_suiteNameFinal;
                     document.getElementById("txtLine5").value = streetLineCS;
                     document.getElementById("txtLine6").value = cityStateFInal;
 
                     document.getElementById("txtLine1b").value = clientNameFinal;
-                    document.getElementById("txtLine2b").value = "***need to check";
-                    document.getElementById("txtLine3b").value = " ***fill later***";
+                    document.getElementById("txtLine2b").value = "Decendent IRA";
+                    document.getElementById("txtLine3b").value = "RBC Capital Marckets LLC Cust";
                     document.getElementById("txtLine4b").value = streetLineBR;
                     document.getElementById("txtLine5b").value = cityStateFInal;
                     document.getElementById("txtLine1a").value = "S";
@@ -1019,14 +1023,14 @@
                 } else if(accountSub == "Roth IRA"){
                     document.getElementById("txtLine1").value = clientNameFinal;
                     document.getElementById("txtLine2").value = "Roth IRA";
-                    document.getElementById("txtLine3").value = " ***fill later***";
+                    document.getElementById("txtLine3").value = "RBC Capital Marckets LLC Cust";
                     document.getElementById("txtLine4").value = apt_suiteNameFinal;
                     document.getElementById("txtLine5").value = streetLineCS;
                     document.getElementById("txtLine6").value = cityStateFInal;
 
                     document.getElementById("txtLine1b").value = clientNameFinal;
                     document.getElementById("txtLine2b").value = "Roth IRA";
-                    document.getElementById("txtLine3b").value = " ***fill later***";
+                    document.getElementById("txtLine3b").value = "RBC Capital Marckets LLC Cust";
                     document.getElementById("txtLine4b").value = streetLineBR;
                     document.getElementById("txtLine5b").value = cityStateFInal;
                     document.getElementById("txtLine1a").value = "S";
@@ -1037,14 +1041,14 @@
                 } else if(accountSub == "Decendent Roth IRA"){
                     document.getElementById("txtLine1").value = clientNameFinal;
                     document.getElementById("txtLine2").value = "Decendent Roth IRA";
-                    document.getElementById("txtLine3").value = " ***fill later***";
+                    document.getElementById("txtLine3").value = "RBC Capital Marckets LLC Cust";
                     document.getElementById("txtLine4").value = apt_suiteNameFinal;
                     document.getElementById("txtLine5").value = streetLineCS;
                     document.getElementById("txtLine6").value = cityStateFInal;
 
                     document.getElementById("txtLine1b").value = clientNameFinal;
                     document.getElementById("txtLine2b").value = "Decendent Roth IRA";
-                    document.getElementById("txtLine3b").value = " ***fill later***";
+                    document.getElementById("txtLine3b").value = "RBC Capital Marckets LLC Cust";
                     document.getElementById("txtLine4b").value = streetLineBR;
                     document.getElementById("txtLine5b").value = cityStateFInal;
                     document.getElementById("txtLine1a").value = "S";
@@ -1055,18 +1059,41 @@
                 } else if(accountSub == "Segregated IRA Rollover"){
                     document.getElementById("txtLine1").value = clientNameFinal;
                     document.getElementById("txtLine2").value = "Segregated IRA Rollover";
-                    document.getElementById("txtLine3").value = " ***fill later***";
+                    document.getElementById("txtLine3").value = "RBC Capital Marckets LLC Cust";
                     document.getElementById("txtLine4").value = apt_suiteNameFinal;
                     document.getElementById("txtLine5").value = streetLineCS;
                     document.getElementById("txtLine6").value = cityStateFInal;
 
                     document.getElementById("txtLine1b").value = clientNameFinal;
                     document.getElementById("txtLine2b").value = "Segregated IRA Rollover";
-                    document.getElementById("txtLine3b").value = " ***fill later***";
+                    document.getElementById("txtLine3b").value = "RBC Capital Marckets LLC Cust";
                     document.getElementById("txtLine4b").value = streetLineBR;
                     document.getElementById("txtLine5b").value = cityStateFInal;
                     document.getElementById("txtLine1a").value = "S";
                     document.getElementById("txtLine2a").value = "";
+                    document.getElementById("txtLine3a").value = "";
+                    document.getElementById("txtLine4a").value = "M";
+                    document.getElementById("txtLine5a").value = "C";
+                }
+            }
+
+            if(accountType == "Joint") {
+                getJtName();
+                if(accountSub == "Joint Tenants WROS"){
+                    document.getElementById("txtLine1").value = clientNameFinal;
+                    document.getElementById("txtLine2").value = jointOwnerName;
+                    document.getElementById("txtLine3").value = "JT TEN/WROS";
+                    document.getElementById("txtLine4").value = apt_suiteNameFinal;
+                    document.getElementById("txtLine5").value = streetLineCS;
+                    document.getElementById("txtLine6").value = cityStateFInal;
+
+                    document.getElementById("txtLine1b").value = clientNameFinal;
+                    document.getElementById("txtLine2b").value = jointOwnerName;
+                    document.getElementById("txtLine3b").value = "JT TEN/WROS";
+                    document.getElementById("txtLine4b").value = streetLineBR;
+                    document.getElementById("txtLine5b").value = cityStateFInal;
+                    document.getElementById("txtLine1a").value = "S";
+                    document.getElementById("txtLine2a").value = "L";
                     document.getElementById("txtLine3a").value = "";
                     document.getElementById("txtLine4a").value = "M";
                     document.getElementById("txtLine5a").value = "C";
